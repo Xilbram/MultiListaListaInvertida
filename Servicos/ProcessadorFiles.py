@@ -14,11 +14,12 @@ class ProcessFiles:
             return arr
 
         except FileNotFoundError:
-            return "File not found"
+            return FileNotFoundError
+
+        except IsADirectoryError:
+            return IsADirectoryError
 
 
 
 
-processador = ProcessFiles()
-arr = processador.returnFileAsArr("Arquivos/err")
-print(len(arr))
+

@@ -2,17 +2,17 @@ from ProcessadorFiles import *
 from random import *
 class GeradorDeDados:
     def __init__(self):
-        self.processadorDeFiles = ProcessFiles()
+        self.__processadorDeFiles = ProcessFiles()
 
-    def get100Generico(self, FileName: str):
-        arrBase = self.processadorDeFiles.returnFileAsArr(FileName)
+    def get100Generico(self, FileName):
+        arrBase = self.__processadorDeFiles.returnFileAsArr(FileName)
         arr100Generic = []
 
         if len(arrBase) == 0:
             return "Arquivo vazio"
 
         for _ in range(100):
-            numeroAleatorio = randint(0, len(arrBase))
+            numeroAleatorio = randint(0, len(arrBase) - 1)
             arr100Generic.append(arrBase[numeroAleatorio])
 
         return arr100Generic
