@@ -2,7 +2,7 @@ from Servicos import ProcessadorFiles
 from Servicos import DiretorioManager
 import os
 
-processadorFiles = ProcessadorFiles.ProcessFiles()
+processadorFiles = ProcessadorFiles.ProcessadorFiles()
 dirManager = DiretorioManager.DiretorioManager()
 pathArquivos = dirManager.GetDiretorioArquivos(os.getcwd())
 
@@ -31,7 +31,7 @@ class MultilistaAnimalFavorito:
             #Itera até após a 7 virgula (posicao de index do proximo animal)
             #Acessa o próximo index, se -1 encerra
             while True:
-                linhaRetorno = processadorFiles.getLinhaFileAsString(pathArquivos + "/Matriculas", indexadorMatricula)
+                linhaRetorno = processadorFiles.getLinhaFileAsString(pathArquivos + "/Cadastros", indexadorMatricula)
 
                 for j in range(len(linhaRetorno)):
                     if linhaRetorno[j] == ',':
@@ -44,7 +44,7 @@ class MultilistaAnimalFavorito:
 
                 if proximoIndexador == -1:
                     linhaRetorno[posicaoSubstituir] = pIndex
-                    processadorFiles.SubstituirLinha(pathArquivos + "/Matriculas", linhaSubstituir, linhaRetorno)
+                    processadorFiles.substituirLinha(pathArquivos + "/Cadastros", linhaSubstituir, linhaRetorno)
                     return
 
                 indexadorMatricula = proximoIndexador
@@ -52,6 +52,7 @@ class MultilistaAnimalFavorito:
 
         else:
             self.diretorioAnimais[pAnimal] = pIndex
+
 
 
 

@@ -1,15 +1,27 @@
 from Arquivos import *
 
 
-class ProcessFiles:
+class ProcessadorFiles:
+
+    def getFileContent(self, file) -> str:
+        try:
+            names_file = open(file, "r")
+            msg = names_file.read()
+            names_file.close()
+
+            return msg
+
+        except FileNotFoundError:
+            return FileNotFoundError
+
+        except IsADirectoryError:
+            return IsADirectoryError
 
     def getLinhaFileAsString(self, file, numLinha) -> str:
         try:
             names_file = open(file, "r")
             lines = names_file.readlines()
             msg = lines[numLinha]
-
-
             names_file.close()
 
             return msg
@@ -55,7 +67,7 @@ class ProcessFiles:
             return IsADirectoryError
 
 
-    def returnFileAsArr(self, file):
+    def getFileAsArr(self, file):
         try:
             names_file = open(file, "r")
             lines = names_file.readlines()
@@ -87,7 +99,7 @@ class ProcessFiles:
             return IsADirectoryError
 
 
-    def SubstituirLinha(self, pFile, pIndexLinha, pLinhaNova):
+    def substituirLinha(self, pFile, pIndexLinha, pLinhaNova):
         try:
             names_file = open(pFile, "r")
             lines = names_file.readlines()

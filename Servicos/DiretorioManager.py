@@ -1,6 +1,6 @@
 class DiretorioManager():
-    def getDiretorioFonte(self, cwd) -> str:
-        path = cwd
+    def getDiretorioFonte(self, pCwd) -> str:
+        path = pCwd
         slashArr = []
         strAsArr = []
 
