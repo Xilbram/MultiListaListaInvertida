@@ -1,0 +1,94 @@
+['0', ',', 'L', 'e', 'o', 'n', 'a', 'r', 'd', 'o', ',', '7', '9', '3', '2', '7', '5', '8', '9', ',', 'G', 'E', 'O', 'G', 'R', 'A', 'F', 'I', 'A', ',', '9', '6', ',', 'C', 'r', 'i', 'c', 'i', 'u', 'm', 'a', ',', 'B', 'a', 'l', 'e', 'i', 'a', ',', '*', ',', 8, ',', '*', '\n']['1', ',', 'A', 'n', 'd', 'e', 'r', 's', 'o', 'n', ',', '1', '0', '2', '1', '0', '3', '9', '1', '0', '0', '8', ',', 'C', 'I', 'N', 'E', 'M', 'A', ',', '6', '6', ',', 'A', 'v', 'a', 'i', ',', 'T', 'o', 'u', 'r', 'o', ',', '*', ',', 4, ',', '*', '\n']2,Tatiana,2102358710,HISTORIA,44,Gremio,Escorpião,*,*,*
+['1', '2', ',', 'D', 'e', 'b', 'o', 'r', 'a', ',', '2', '6', '1', '9', '7', '1', '0', '6', '2', ',', 'B', 'I', 'O', 'L', 'O', 'G', 'I', 'A', ',', '7', '5', ',', 'P', 'a', 'l', 'm', 'e', 'i', 'r', 'a', 's', ',', 'G', 'o', 'r', 'i', 'l', 'a', ',', '*', ',', 13, ',', '*', '\n']4,Miriam,18123324,EDUCACAO FISICA,58,Vasco da Gama,Pombo,*,*,*
+['3', ',', 'A', 'l', 'e', 's', 's', 'a', 'n', 'd', 'r', 'a', ',', '3', '8', '7', '5', '5', '6', '3', '6', ',', 'A', 'N', 'I', 'M', 'A', 'C', 'A', 'O', ',', '4', '7', ',', 'P', 'a', 'l', 'm', 'e', 'i', 'r', 'a', 's', ',', 'E', 's', 'c', 'o', 'r', 'p', 'i', 'ã', 'o', ',', '*', ',', 10, ',', '*', '\n']8,Railton,05070888,ENGENHARIA,36,Gremio,Peixe,*,*,*
+9,Aline,756108900,CONTABEIS,11,Inter,Mosquito,*,*,*
+10,Talita,28298733,EDUCACAO FISICA,41,Inter,Touro,*,*,*
+11,Matheus,40324675,CIENCIAS COMPUT,57,Palmeiras,Pombo,*,*,*
+12,Debora,261971062,BIOLOGIA,75,Palmeiras,Gorila,*,*,*
+13,Ester,394831087,BIOLOGIA,45,Bahia,Morcego,*,*,*
+14,Matheus,07397751,CONTABEIS,3,Gremio,Jacaré,*,*,*
+15,Carol,810164598,ENGENHARIA,100,Bahia,Pombo,*,*,*
+16,Augusto,84168894,ANIMACAO,83,Inter,Touro,*,*,*
+17,Ezequiel,1003910566,CONTABEIS,62,Bahia,Touro,*,*,*
+18,Rebeca,221105876,ANTROPOLOGIA,88,Vasco da Gama,Escorpião,*,*,*
+19,Leonardo,80170730,VETERINARIA,93,Palmeiras,Gorila,*,*,*
+20,Neide,759313107,BIOLOGIA,23,Paisandu,Mosquito,*,*,*
+21,Denise,8109910526,CINEMA,10,Corinthias,Leão,*,*,*
+22,Mônica,80216595,ENGENHARIA,72,Pancinha do norte,Morcego,*,*,*
+23,Fabiana,12127817,DESIGN,10,Fluminense,Leão,*,*,*
+24,Aline,61944043,ANTROPOLOGIA,38,Fluminense,Canarinho,*,*,*
+25,Vanessa,562251088,PSICOLOGIA,11,Fluminense,Baleia,*,*,*
+26,José,32701247,ANIMACAO,66,Inter,Tubarão,*,*,*
+27,Dorival,86646607,PSICOLOGIA,33,Fluminense,Leão,*,*,*
+28,Tatiane,101403453,CINEMA,38,Inter,Mosquito,*,*,*
+29,André,84663693,EDUCACAO FISICA,42,Corinthias,Baleia,*,*,*
+30,Leomar,352221071,ANIMACAO,40,Avai,Pombo,*,*,*
+31,Nadia,478108175,CINEMA,82,Criciuma,Peixe,*,*,*
+32,Simone,87530971,DESIGN,5,Avai,Jacaré,*,*,*
+33,Barbara,0610110689,DESIGN,23,Cruzeiro,Rinoceronte,*,*,*
+34,Amanda,6210671023,CIENCIAS COMPUT,57,Paisandu,Leão,*,*,*
+35,Richard,09350307,MEDICINA,91,Pancinha do norte,Canarinho,*,*,*
+36,Damares,163071053,GEOGRAFIA,7,Pancinha do norte,Pombo,*,*,*
+37,Edicarlos,00506698,CIENCIAS COMPUT,30,Gremio,Touro,*,*,*
+38,Damares,46848982,CONTABEIS,25,Ceara,Touro,*,*,*
+39,Talita,18571584,CONTABEIS,2,Gremio,Leão,*,*,*
+40,Diana,87417663,PSICOLOGIA,12,Paisandu,Pombo,*,*,*
+41,Rebeca,1101018116,ANTROPOLOGIA,41,Ararangua,Jacaré,*,*,*
+42,Dorival,229146810,CONTABEIS,97,Inter,Peixe,*,*,*
+43,Reinaldo,7109009710,ANTROPOLOGIA,47,Ceara,Mosquito,*,*,*
+44,Ezequiel,03005782,DESIGN,55,Cruzeiro,Touro,*,*,*
+45,Camila,22115876,GEOGRAFIA,61,Ararangua,Peixe,*,*,*
+46,Gisele,1910153108,VETERINARIA,32,Paisandu,Pombo,*,*,*
+47,Diego,68089428,GEOGRAFIA,95,Inter,Rinoceronte,*,*,*
+48,Olivia,30265833,ANIMACAO,64,Avai,Touro,*,*,*
+49,Tatiane,77317215,VETERINARIA,59,Inter,Morcego,*,*,*
+50,Fabio,41174908,CINEMA,99,Palmeiras,Morcego,*,*,*
+51,Daniela,887100864,CIENCIAS COMPUT,74,Vasco da Gama,Canarinho,*,*,*
+52,Gisele,371001014,EDUCACAO FISICA,28,Pancinha do norte,Rinoceronte,*,*,*
+53,Railton,75548100,VETERINARIA,81,Ceara,Canarinho,*,*,*
+54,Camila,475104153,CINEMA,41,Vasco da Gama,Macaco,*,*,*
+55,Bianca,98086501,DESIGN,96,Inter,Macaco,*,*,*
+56,Robson,73993447,HISTORIA,94,Ceara,Canarinho,*,*,*
+57,Amanda,42613720,ECONOMIA,91,Corinthias,Touro,*,*,*
+58,Talita,211074664,ANTROPOLOGIA,23,Vasco da Gama,Mosquito,*,*,*
+59,Rogério,29629057,DESIGN,33,Criciuma,Pombo,*,*,*
+60,Rivaldo,185410691,ECONOMIA,54,Fluminense,Onça,*,*,*
+61,Eliseu,527010184,VETERINARIA,25,Bahia,Macaco,*,*,*
+62,Fabiana,07607928,ANIMACAO,35,Palmeiras,Gorila,*,*,*
+63,Carol,49611579,BIOLOGIA,15,Ceara,Baleia,*,*,*
+64,João,107529146,ANTROPOLOGIA,50,Corinthias,Onça,*,*,*
+65,Vania,24026233,CIENCIAS COMPUT,65,Pancinha do norte,Canarinho,*,*,*
+66,Pedro,10103102478,BIOLOGIA,22,Fluminense,Macaco,*,*,*
+67,Marta,83820911,GEOGRAFIA,91,Vasco da Gama,Morcego,*,*,*
+68,Camila,510710106210,VETERINARIA,37,Avai,Rinoceronte,*,*,*
+69,Nadia,567100981,ECONOMIA,34,Bahia,Tubarão,*,*,*
+70,Fabiana,288818910,CIENCIAS COMPUT,100,Bahia,Touro,*,*,*
+71,Fatima,60224802,BIOLOGIA,86,Avai,Mosquito,*,*,*
+72,Carlos,40090608,EDUCACAO FISICA,27,Pancinha do norte,Jacaré,*,*,*
+73,Alexandre,95396044,MEDICINA,62,Ceara,Peixe,*,*,*
+74,Diego,359109389,ENGENHARIA,91,Palmeiras,Peixe,*,*,*
+75,Daniel,450910431,ANTROPOLOGIA,93,Vasco da Gama,Touro,*,*,*
+76,Dorival,954541094,ECONOMIA,96,Pancinha do norte,Touro,*,*,*
+77,Carol,388610054,HISTORIA,47,Corinthias,Pombo,*,*,*
+78,Ezequiel,32134674,BIOLOGIA,66,Criciuma,Morcego,*,*,*
+79,Reinaldo,12114580,MEDICINA,87,Criciuma,Pombo,*,*,*
+80,Marta,198606108,ANIMACAO,78,Palmeiras,Gorila,*,*,*
+81,Bruna,1095674610,ANIMACAO,2,Avai,Jacaré,*,*,*
+82,Paulo,641093511,DESIGN,48,Fluminense,Onça,*,*,*
+83,Luiza,09617669,DESIGN,34,Inter,Baleia,*,*,*
+84,Lucas,3100100658,CIENCIAS COMPUT,99,Ararangua,Onça,*,*,*
+85,Debora,9238106210,DESIGN,70,Fluminense,Gorila,*,*,*
+86,Ronaldo,410427936,CONTABEIS,78,Pancinha do norte,Leão,*,*,*
+87,Rodrigo,092574710,ANTROPOLOGIA,62,Ceara,Touro,*,*,*
+88,Daniela,31487545,PSICOLOGIA,72,Paisandu,Jacaré,*,*,*
+89,Edicarlos,11891733,BIOLOGIA,58,Paisandu,Peixe,*,*,*
+90,Reinaldo,010139307,ENGENHARIA,95,Avai,Baleia,*,*,*
+91,Emilia,405441020,BIOLOGIA,34,Vasco da Gama,Rinoceronte,*,*,*
+92,Alexandre,16358871,ECONOMIA,84,Corinthias,Morcego,*,*,*
+93,Marcos,25281987,BIOLOGIA,53,Fluminense,Rinoceronte,*,*,*
+94,Queila,941801061,MEDICINA,36,Fluminense,Touro,*,*,*
+95,Luciana,443389910,CONTABEIS,29,Inter,Rinoceronte,*,*,*
+96,Gilmar,906510345,CIENCIAS COMPUT,79,Avai,Canarinho,*,*,*
+97,Alessandra,148101559,BIOLOGIA,53,Bahia,Pombo,*,*,*
+98,Robson,68842753,ANTROPOLOGIA,91,Bahia,Pombo,*,*,*
+99,Melquisedeque,1010108510010,HISTORIA,34,Bahia,Morcego,*,*,*

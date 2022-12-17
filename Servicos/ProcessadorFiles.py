@@ -99,7 +99,7 @@ class ProcessadorFiles:
             return IsADirectoryError
 
 
-    def substituirLinha(self, pFile, pIndexLinha, pLinhaNova):
+    def substituirLinha(self, pFile, pIndexLinha: int, pLinhaNova):
         try:
             names_file = open(pFile, "r")
             lines = names_file.readlines()

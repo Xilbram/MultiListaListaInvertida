@@ -28,13 +28,15 @@ class DataBase:
     def salvarDados(self):
         self.__servicosCadastros.salvarCadastros(self.__cadastros)
 
+    def salvarEIndexarDados(self):
+        self.__servicosCadastros.salvarEIndexarCadastros(self.__cadastros)
 
 
 db = DataBase()
 db.preencherDataBase(100)
-db.mostrarTodosDados()
-db.salvarDados()
+#db.mostrarTodosDados()
+#db.salvarDados()
+db.salvarEIndexarDados()
 
-db.limparDataBaseMemPrincipal()
+#db.limparDataBaseMemPrincipal()
 #db.limparDataBaseMemSecundaria()
-

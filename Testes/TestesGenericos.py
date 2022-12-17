@@ -52,8 +52,19 @@ def TesteSubstituirLinha():
     teste = ProcessadorFiles()
     teste.substituirLinha(path + "/MatriculasIndexadas", 2, "msg")
 
+
+def TesteDict():
+    var = {}
+    var['ok'] = '1'
+    var['ok'] = var['ok'] + ',2'
+
+
+    for item in var.items():
+        print(item)
+
 #TesteLimparFile()
 
 #TesteRemoverWhitespace()
 #TestePegarLinha()
-TesteSubstituirLinha()
+#TesteSubstituirLinha()
+TesteDict()

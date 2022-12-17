@@ -23,36 +23,35 @@ class MultilistaAnimalFavorito:
 
     def acessarESetarProximoAnimal(self, pAnimal:str, pIndex):
         if pAnimal in self.diretorioAnimais.keys():
-            primeiroAnimalIndexado = self.diretorioAnimais[pAnimal]
-            indexadorMatricula = primeiroAnimalIndexado
+            indexPrimeiroAnimal = self.diretorioAnimais[pAnimal]
             contVirgulas = 0
 
             #Pega uma linha do file como array
             #Itera até após a 7 virgula (posicao de index do proximo animal)
             #Acessa o próximo index, se -1 encerra
             while True:
-                linhaRetorno = processadorFiles.getLinhaFileAsString(pathArquivos + "/Cadastros", indexadorMatricula)
+                linha = processadorFiles.getLinhaFileAsString(pathArquivos + "/Cadastros", indexPrimeiroAnimal)
+                arrLinha = list(linha)
 
-                for j in range(len(linhaRetorno)):
-                    if linhaRetorno[j] == ',':
+                for j in range(len(linha)):
+                    if linha[j] == ',':
                         contVirgulas += 1
-                        if contVirgulas == 7:
-                            linhaSubstituir = linhaRetorno[0]
-                            proximoIndexador = linhaRetorno[j + 2]
-                            posicaoSubstituir = j + 2
+                        if contVirgulas == 8:
+                            numeroLinhaSubstituir = linha[0]
+                            indexProximoAnimal = linha[j + 1]
+                            posicaoIndexProximoAnimal = j + 1
                             break
 
-                if proximoIndexador == -1:
-                    linhaRetorno[posicaoSubstituir] = pIndex
-                    processadorFiles.substituirLinha(pathArquivos + "/Cadastros", linhaSubstituir, linhaRetorno)
+                if indexProximoAnimal == "*":
+                    arrLinha[posicaoIndexProximoAnimal] = pIndex
+                    processadorFiles.substituirLinha(pathArquivos + "/Cadastros", int(numeroLinhaSubstituir), str(arrLinha))
                     return
 
-                indexadorMatricula = proximoIndexador
+                indexProximoAnimal = indexProximoAnimal
 
 
         else:
             self.diretorioAnimais[pAnimal] = pIndex
-
 
 
 
