@@ -1,4 +1,4 @@
-class LimpadorDiretorio():
+class DiretorioManager():
     def getDiretorioFonte(self, cwd) -> str:
         path = cwd
         slashArr = []

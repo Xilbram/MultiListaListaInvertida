@@ -1,6 +1,6 @@
 import os
 
-import Servicos.LimpadorDiretorios
+import Servicos.DiretorioManager
 from Servicos.ProcessadorFiles import *
 
 
@@ -13,14 +13,47 @@ def TesteProcessador():
 
 
 def TesteFiles():
-    teste = Servicos.LimpadorDiretorios.LimpadorDiretorio()
+    teste = Servicos.DiretorioManager.DiretorioManager()
     ok = teste.GetDiretorioArquivos(os.getcwd())
 
     print(ok)
 
 
+def TesteLimparFile():
+    dir = Servicos.DiretorioManager.DiretorioManager()
+    path = dir.GetDiretorioArquivos(os.getcwd())
+
+    teste = ProcessFiles()
+    teste.limparFile(path + "/Matriculas")
+    print("ok")
+    print(path)
 
 
+def TesteRemoverWhitespace():
+    dir = Servicos.DiretorioManager.DiretorioManager()
+    path = dir.GetDiretorioArquivos(os.getcwd())
+
+    teste = ProcessFiles()
+    teste.removerEspacosEmBranco(path + "/NomeBackup")
 
 
-teste = TesteFiles()
+def TestePegarLinha():
+    dir = Servicos.DiretorioManager.DiretorioManager()
+    path = dir.GetDiretorioArquivos(os.getcwd())
+
+    teste = ProcessFiles()
+    msg = teste.getLinhaFileAsString(path + "/NomeBackup", 5)
+    print(msg)
+
+def TesteSubstituirLinha():
+    dir = Servicos.DiretorioManager.DiretorioManager()
+    path = dir.GetDiretorioArquivos(os.getcwd())
+
+    teste = ProcessFiles()
+    teste.SubstituirLinha(path + "/MatriculasIndexadas", 2, "msg")
+
+#TesteLimparFile()
+
+#TesteRemoverWhitespace()
+#TestePegarLinha()
+TesteSubstituirLinha()

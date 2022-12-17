@@ -1,0 +1,100 @@
+Index, Nome, Curso, Vontade de viver, Animal Favorito, Time, NextCurso, NextAnimal, NextTime
+2,Leticia, BIOLOGIA, -4, Cruzeiro, Macaco, -1, -1, -1
+msg4,André, CINEMA, -20, Flamengo, Peixe, -1, -1, -1
+5,Victor, ANTROPOLOGIA, -9, Corinthias, Morcego, -1, -1, -1
+6,Gilmar, CINEMA, -43, Flamengo, Touro, -1, -1, -1
+7,Igor, CINEMA, -21, Paisandu, Mosquito, -1, -1, -1
+8,Iva, PSICOLOGIA, -25, Ararangua, Jacaré, -1, -1, -1
+9,Plinio, ENGENHARIA, 14, Bahia, Leão, -1, -1, -1
+10,Elivelton, PSICOLOGIA, 11, Gremio, Leão, -1, -1, -1
+11,Lucas, GEOGRAFIA, -30, Paisandu, Leão, -1, -1, -1
+12,Miriam, HISTORIA, 47, Pancinha do norte, Gorila, -1, -1, -1
+13,Queila, BIOLOGIA, -26, Gremio, Escorpião, -1, -1, -1
+14,Aline, ANTROPOLOGIA, -14, Palmeiras, Macaco, -1, -1, -1
+15,Dorival, CIENCIAS COMPUT, 11, Bahia, Tubarão, -1, -1, -1
+16,Igor, ECONOMIA, -27, Pancinha do norte, Macaco, -1, -1, -1
+17,Marta, VETERINARIA, 26, Bahia, Pombo, -1, -1, -1
+18,Elias, ANTROPOLOGIA, 16, Fluminense, Touro, -1, -1, -1
+19,João, PSICOLOGIA, 33, Avai, Gorila, -1, -1, -1
+20,Ricardo, HISTORIA, -19, Cruzeiro, Canarinho, -1, -1, -1
+21,Luciana, HISTORIA, -29, Ceara, Baleia, -1, -1, -1
+22,Ricardo, ECONOMIA, 33, Fluminense, Leão, -1, -1, -1
+23,Carlos, CINEMA, -21, Bahia, Gorila, -1, -1, -1
+24,Debora, DESIGN, 39, Criciuma, Peixe, -1, -1, -1
+25,Paulo, ECONOMIA, -12, Fluminense, Morcego, -1, -1, -1
+26,Richard, GEOGRAFIA, -32, Ararangua, Onça, -1, -1, -1
+27,Vanessa, MEDICINA, -31, Pancinha do norte, Escorpião, -1, -1, -1
+28,Daniela, PSICOLOGIA, -31, Fluminense, Onça, -1, -1, -1
+29,Railton, DESIGN, -1, Gremio, Baleia, -1, -1, -1
+30,Ronaldo, CINEMA, 35, Ararangua, Baleia, -1, -1, -1
+31,Eliana, ECONOMIA, 38, Ararangua, Rinoceronte, -1, -1, -1
+32,Gilmar, ENGENHARIA, -38, Inter, Leão, -1, -1, -1
+33,Valquiria, ANTROPOLOGIA, 1, Fluminense, Gorila, -1, -1, -1
+34,Talita, ECONOMIA, -22, Paisandu, Peixe, -1, -1, -1
+35,Igor, GEOGRAFIA, -45, Fluminense, Onça, -1, -1, -1
+36,Luciano, CONTABEIS, -16, Vasco da Gama, Leão, -1, -1, -1
+37,Luiz, ENGENHARIA, 44, Avai, Canarinho, -1, -1, -1
+38,Alessandra, HISTORIA, 45, Paisandu, Escorpião, -1, -1, -1
+39,Leandro, EDUCACAO FISICA, 24, Pancinha do norte, Morcego, -1, -1, -1
+40,Diana, PSICOLOGIA, 14, Gremio, Leão, -1, -1, -1
+41,Neide, HISTORIA, -38, Palmeiras, Morcego, -1, -1, -1
+42,Carolina, ANIMACAO, -19, Pancinha do norte, Macaco, -1, -1, -1
+43,Rivaldo, BIOLOGIA, -44, Pancinha do norte, Tubarão, -1, -1, -1
+44,Daniela, ANIMACAO, 45, Criciuma, Pombo, -1, -1, -1
+45,Richard, PSICOLOGIA, -26, Bahia, Canarinho, -1, -1, -1
+46,Amanda, CIENCIAS COMPUT, 22, Vasco da Gama, Peixe, -1, -1, -1
+47,Matheus, ANTROPOLOGIA, -5, Palmeiras, Baleia, -1, -1, -1
+48,André, ANIMACAO, -43, Pancinha do norte, Tubarão, -1, -1, -1
+49,Paulo, CINEMA, 0, Corinthias, Macaco, -1, -1, -1
+50,Marta, ECONOMIA, 12, Fluminense, Peixe, -1, -1, -1
+51,Fabiana, MEDICINA, -50, Avai, Pombo, -1, -1, -1
+52,Plinio, PSICOLOGIA, 29, Ararangua, Gorila, -1, -1, -1
+53,Maria, HISTORIA, 35, Flamengo, Mosquito, -1, -1, -1
+54,Leomar, MEDICINA, 36, Cruzeiro, Escorpião, -1, -1, -1
+55,Vania, ANIMACAO, 8, Fluminense, Tubarão, -1, -1, -1
+56,Railton, MEDICINA, -42, Cruzeiro, Touro, -1, -1, -1
+57,Leonardo, CIENCIAS COMPUT, 44, Avai, Macaco, -1, -1, -1
+58,Vania, BIOLOGIA, -21, Ceara, Morcego, -1, -1, -1
+59,Tiago, BIOLOGIA, -44, Flamengo, Mosquito, -1, -1, -1
+60,Victor, VETERINARIA, 8, Inter, Morcego, -1, -1, -1
+61,Diego, DESIGN, -48, Inter, Onça, -1, -1, -1
+62,Osmar, HISTORIA, -31, Vasco da Gama, Pombo, -1, -1, -1
+63,Rodrigo, DESIGN, 15, Ceara, Tubarão, -1, -1, -1
+64,Eduardo, CINEMA, -28, Paisandu, Pombo, -1, -1, -1
+65,Mônica, HISTORIA, -46, Avai, Escorpião, -1, -1, -1
+66,Bruno, CINEMA, 38, Fluminense, Onça, -1, -1, -1
+67,Aline, DESIGN, 36, Gremio, Tubarão, -1, -1, -1
+68,Alexandre, CIENCIAS COMPUT, -19, Palmeiras, Baleia, -1, -1, -1
+69,Denise, CONTABEIS, 2, Cruzeiro, Morcego, -1, -1, -1
+70,Queila, HISTORIA, -45, Vasco da Gama, Onça, -1, -1, -1
+71,Rogério, BIOLOGIA, -23, Fluminense, Pombo, -1, -1, -1
+72,Railton, BIOLOGIA, -29, Pancinha do norte, Jacaré, -1, -1, -1
+73,Ronaldo, ECONOMIA, 13, Cruzeiro, Peixe, -1, -1, -1
+74,Gilmar, VETERINARIA, 39, Bahia, Tubarão, -1, -1, -1
+75,Ezequiel, VETERINARIA, -4, Vasco da Gama, Macaco, -1, -1, -1
+76,Reinaldo, ENGENHARIA, 27, Paisandu, Pombo, -1, -1, -1
+77,Rebeca, DESIGN, 31, Bahia, Canarinho, -1, -1, -1
+78,Olivia, GEOGRAFIA, 41, Gremio, Touro, -1, -1, -1
+79,Elias, ANTROPOLOGIA, -38, Bahia, Macaco, -1, -1, -1
+80,Gilmar, DESIGN, 22, Criciuma, Onça, -1, -1, -1
+81,Queila, CINEMA, 12, Flamengo, Rinoceronte, -1, -1, -1
+82,Edicarlos, BIOLOGIA, 39, Ceara, Tubarão, -1, -1, -1
+83,Marta, VETERINARIA, -9, Inter, Macaco, -1, -1, -1
+84,Neide, ANTROPOLOGIA, -22, Ararangua, Canarinho, -1, -1, -1
+85,André, MEDICINA, 3, Palmeiras, Tubarão, -1, -1, -1
+86,Viviane, PSICOLOGIA, 16, Pancinha do norte, Escorpião, -1, -1, -1
+87,Alencar, CINEMA, -21, Corinthias, Gorila, -1, -1, -1
+88,Ana, EDUCACAO FISICA, 40, Paisandu, Macaco, -1, -1, -1
+89,Mônica, GEOGRAFIA, 41, Gremio, Canarinho, -1, -1, -1
+90,Luiza, HISTORIA, -50, Vasco da Gama, Touro, -1, -1, -1
+91,Daniela, ANTROPOLOGIA, 30, Criciuma, Pombo, -1, -1, -1
+92,Miriam, ANTROPOLOGIA, -12, Fluminense, Mosquito, -1, -1, -1
+93,Gilmar, GEOGRAFIA, 35, Pancinha do norte, Morcego, -1, -1, -1
+94,Marcos, BIOLOGIA, -19, Inter, Gorila, -1, -1, -1
+95,Carol, MEDICINA, -46, Cruzeiro, Morcego, -1, -1, -1
+96,Emilia, GEOGRAFIA, -4, Avai, Peixe, -1, -1, -1
+97,Bruno, CINEMA, 22, Fluminense, Morcego, -1, -1, -1
+98,Luiza, VETERINARIA, -8, Corinthias, Escorpião, -1, -1, -1
+99,Bruna, ECONOMIA, -35, Vasco da Gama, Onça, -1, -1, -1
+100,Fagner, CONTABEIS, 24, Inter, Tubarão, -1, -1, -1
+101,Miriam, ENGENHARIA, 36, Inter, Touro, -1, -1, -1
