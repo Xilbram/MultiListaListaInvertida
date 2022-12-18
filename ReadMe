@@ -1,0 +1,21 @@
+Este é o projeto da disciplina de ED 2022 semestre 2, desenvolvido por Gibram e Eduardo Zanetta
+Ele consiste em um sistema de cadastros que implemente multilistas e listas invertidas
+
+Para executar o sistema, basta executar o arquivo "main.py"
+
+Os campos que permitem busca por coluna são Animal favorito, Time, Curso e vontade de viver (um valor de 0 a 100)
+
+
+Para a realizacao do projeto, foram criados os seguintes diretorios:
+Arquivos -> Armazena os dados base de criação de cadastros aleatorio e o arquivo de persistência Cadastros. Todos arquivos nessa pasta devem ser .txt
+ArquivosMemóriaPrincipal -> Consiste nas estruturas da Multilista e Lista Invertida. A multilista indexa o arquivo principal, Cadastros, e 
+preserva apenas o ṕrimeiro dado inserido em seu dicionário de dados. A lista invertida mantém os arquivos todos em memória princípal
+durante o funcionamento do sistema, e armazena todos em um array com o index de seus dados acessivel por uma chave, sendo também um dicionário.
+DTO -> Um objeto para transferencia de dados, propõe-se a instanciar o arquivo txt Cadastros.
+Serviços -> Classes que visam realizar tarefas logicas. DataBase serve como uma facade, permitindo acessar outros servicos através dela
+DiretorioManager visa corrigir os paths necessários para acessar os diretórios de textos
+GeradorDados cria dados aleatorios de acordo com dados existentes nos txts
+ProcessadorFiles cuida da entrada e saida de elementos dos Txts para processos 
+SvcCadastros agrupa uma série de funções necessárias para realizar os cadastros, exclusões e outras atividades, sendo o maior grupo de serviços
+TestesGenericos -> Classe de testes 
+
