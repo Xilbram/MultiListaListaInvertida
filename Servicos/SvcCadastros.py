@@ -84,7 +84,8 @@ class SvcCadastros:
 
         return DTOS
 
-
+    def getLinhaAsStr(self, pLinha):
+        return self.__processadorFiles.getLinhaFileAsString(self.__pathArquivos + "/Cadastros", pLinha)
 
     def salvarCadastros(self, pCadastros: []):
         msg = ""
@@ -116,30 +117,22 @@ class SvcCadastros:
     def limparCadastros(self):
         self.__processadorFiles.limparFile(self.__pathArquivos + "/Cadastros")
 
-    def salvarEIndexarCadastros(self, pCadastros: [], pListasInvertidas: []):
+    def inserirCadastro(self, pData):
         msg = ""
-        for i in range(len(pCadastros)):
-            msg += str(pCadastros[i].index) + ";"
-            msg += pCadastros[i].nome + ";"
-            msg += pCadastros[i].matricula + ";"
-            msg += pCadastros[i].curso + ";"
-            msg += str(pCadastros[i].vontadeDeViver) + ";"
-            msg += pCadastros[i].time + ";"
-            msg += pCadastros[i].animalFavorito + ";"
-            msg += pCadastros[i].indexNextCurso + ";"
-            msg += pCadastros[i].indexNextAnimal + ";"
-            msg += pCadastros[i].indexNextTime + ";"
-            msg += pCadastros[i].indexNextVontadeDeViver
-            msg += "\n"
+        ultima_linha = int(self.__processadorFiles.getIndexUltimaLinhaFile(self.__pathArquivos + "/Cadastros"))
+        msg += str(ultima_linha) + ";"
+        for i in range(len(pData)):
+            msg += pData[i] + ";"
 
-            #indexa ListaInvertida
-            pListasInvertidas[0].inserir(pCadastros[i].animalFavorito, pCadastros[i].index)
-            pListasInvertidas[1].inserir(pCadastros[i].curso, pCadastros[i].index)
-            pListasInvertidas[2].inserir(pCadastros[i].time, pCadastros[i].index)
-            pListasInvertidas[3].inserir(pCadastros[i].vontadeDeViver, pCadastros[i].index)
+        msg += "-1;"
+        msg += "-1;"
+        msg += "-1;"
+        msg += "-1"
+        msg += "\n"
+        self.__processadorFiles.inserirLinhaFinalFile(self.__pathArquivos + "/Cadastros", msg)
 
-
-        self.__processadorFiles.inserirDataEmFile(self.__pathArquivos + "/Cadastros", msg)
+    def removerCadastro(self, pIndex):
+        self.__processadorFiles.substituirLinha(self.__pathArquivos + "/Cadastros", pIndex, "")
 
 
 

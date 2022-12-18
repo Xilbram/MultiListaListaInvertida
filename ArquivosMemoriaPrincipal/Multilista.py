@@ -8,10 +8,11 @@ class Multilista():
         self.__diretorioTimes = {}
         self.__diretorioCursos = {}
         self.__diretorioVontadeViver = {}
-        self.__dicts = [self.__diretorioAnimais,self.__diretorioTimes,self.__diretorioCursos,self.__diretorioVontadeViver]
+        self.__dicts = [self.__diretorioAnimais,self.__diretorioCursos,self.__diretorioTimes,self.__diretorioVontadeViver]
         self.__dirManager = DiretorioManager.DiretorioManager()
         self.__pathArquivos = self.__dirManager.GetDiretorioArquivos(os.getcwd())
         self.__processadorFiles = ProcessadorFiles.ProcessadorFiles()
+        self.__totalVirgulas = 0
 
     def indexarPorListaInvertida(self, pListaInvertidas: list):
         tipoIndexacao = 0
@@ -42,19 +43,19 @@ class Multilista():
 
             tipoIndexacao += 1
 
-
     def acessarLinhaESettarProxIndex(self, pIndexLinha,pTipoIndexacao,pProximoIndex):
         # animal
-        totalVirgulas = 7
+        pTipoIndexacao = int(pTipoIndexacao)
+        if pTipoIndexacao == 0:
+            self.__totalVirgulas = 7
         # Curso
         if pTipoIndexacao == 1:
-            totalVirgulas = 8
+            self.__totalVirgulas = 8
         # Time
         if pTipoIndexacao == 2:
-            totalVirgulas = 9
-
+            self.__totalVirgulas = 9
         if pTipoIndexacao == 3:
-            totalVirgulas = 10
+            self.__totalVirgulas = 10
 
         contVirgulas = 0
         linha = self.__processadorFiles.getLinhaFileAsString(self.__pathArquivos + "/Cadastros", pIndexLinha)
@@ -64,10 +65,10 @@ class Multilista():
 
         for char in linha:
 
-            if contVirgulas != totalVirgulas:
+            if contVirgulas != self.__totalVirgulas:
                 novaLinha += char
 
-            if (numeroFoiAlterado == False) and (contVirgulas == totalVirgulas):
+            if (numeroFoiAlterado == False) and (contVirgulas == self.__totalVirgulas):
                 novaLinha += str(pProximoIndex)
                 if (pTipoIndexacao != 3):
                     novaLinha += ";"
@@ -80,16 +81,20 @@ class Multilista():
 
         self.__processadorFiles.substituirLinha(self.__pathArquivos + "/Cadastros", pIndexLinha, novaLinha)
 
-
     def acessarLinhaEPegarProxIndex(self, pIndexLinha, pTipoIndexacao) -> str:
+        pTipoIndexacao = int(pTipoIndexacao) -1
         #animal
-        totalVirgulas = 7
-        #Curso
-        if pTipoIndexacao == 1:
-            totalVirgulas = 8
+        if pTipoIndexacao == 0:
+            self.__totalVirgulas = 7
         #Time
+        if pTipoIndexacao == 1:
+            self.__totalVirgulas = 8
+
         if pTipoIndexacao == 2:
-            totalVirgulas = 9
+            self.__totalVirgulas = 9
+
+        if pTipoIndexacao == 3:
+            self.__totalVirgulas = 10
 
         contVirgulas = 0
         linha = self.__processadorFiles.getLinhaFileAsString(self.__pathArquivos + "/Cadastros", pIndexLinha)
@@ -99,7 +104,7 @@ class Multilista():
             if char == ';':
                 contVirgulas += 1
 
-            if contVirgulas == totalVirgulas:
+            if contVirgulas == self.__totalVirgulas:
                 alvoAlteracao += char
 
             if char == "\n":
@@ -122,21 +127,19 @@ class Multilista():
         num = int(pTipoIndexacao)
         dictEscolhido = self.__dicts[num -1]
         arrIndex = []
-        keyEscolhida = str(pEscolha)
-        keyEscolhida = keyEscolhida.capitalize()
-        keyEscolhida = ";" + keyEscolhida
+        keyEscolhida = str(pEscolha).lower()
 
         primeiroAlvo = dictEscolhido[keyEscolhida]
-        alvo = primeiroAlvo
 
         while True:
-            nextIndex = self.acessarLinhaEPegarProxIndex(int(alvo), pTipoIndexacao)
-            alvo = nextIndex
-            arrIndex.append(nextIndex)
+            arrIndex.append(primeiroAlvo)
+            nextIndex = self.acessarLinhaEPegarProxIndex(int(primeiroAlvo), pTipoIndexacao)
+            primeiroAlvo = nextIndex
 
             if nextIndex == "-1":
                 break
 
+        arrIndex.pop()
         for i in range(len(arrIndex)):
             print(self.__processadorFiles.getLinhaFileAsString(self.__pathArquivos + "/Cadastros", arrIndex[i]))
 

@@ -133,4 +133,21 @@ class ProcessadorFiles:
         except IsADirectoryError:
             return IsADirectoryError
 
+    def inserirLinhaFinalFile(self, file, pLinhaNova):
+        try:
+            names_file = open(file, "a")
+
+            names_file.write(pLinhaNova)
+
+            names_file.close()
+
+
+        except FileNotFoundError:
+            return FileNotFoundError
+
+        except IsADirectoryError:
+            return IsADirectoryError
+
+
+
 

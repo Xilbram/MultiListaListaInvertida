@@ -46,7 +46,6 @@ class DataBase:
             self.__cadastros = self.__servicosCadastros.getCadastrosAsDTO()
             self.__listasInvertidas = self.__servicosCadastros.indexarDados(self.__cadastros, self.__listasInvertidas)
             self.__multiListas.indexarPorListaInvertida(self.__listasInvertidas)
-            self.__foiIndexado = True
 
 
 
@@ -65,25 +64,21 @@ class DataBase:
             dictAnimais =  self.__listaInvertidaAnimais.getIndexados()
             for key in dictAnimais.keys():
                 msg = str(key)
-                msg = msg[1:]
                 print(msg)
         if pColuna == "2":
             dictTimes = self.__listaInvertidaTimes.getIndexados()
             for key in dictTimes.keys():
                 msg = str(key)
-                msg = msg[1:]
                 print(msg)
         if pColuna == "3":
             dictCursos = self.__listaInvertidaCursos.getIndexados()
             for key in dictCursos.keys():
                 msg = str(key)
-                msg = msg[1:]
                 print(msg)
         if pColuna == "4":
             dictVontadeViver = self.__listaInvertidaVontadeDeViver.getIndexados()
             for key in dictVontadeViver.keys():
                 msg = str(key)
-                msg = msg[1:]
                 print(msg)
 
     def getKeysMultilista(self, pColuna):
@@ -91,11 +86,41 @@ class DataBase:
         arr = self.__multiListas.getKeys(pColuna)
         for item in arr:
             item = str(item)
-            msg = item[1:]
-            print(msg)
+            print(item)
     def getIndexadosPorMultilista(self, pColuna, pEspecificacao):
         self.__multiListas.getIndexados(pColuna, pEspecificacao)
 
+    def atualizarListaInvertida(self):
+        self.__cadastros = None
+        self.__cadastros = self.__servicosCadastros.getCadastrosAsDTO()
+        self.__listaInvertidaTimes = ListaInvertida()
+        self.__listaInvertidaCursos = ListaInvertida()
+        self.__listaInvertidaVontadeDeViver = ListaInvertida()
+        self.__listaInvertidaAnimais = ListaInvertida()
+        self.__listasInvertidas = self.__servicosCadastros.indexarDados(self.__cadastros, self.__listasInvertidas)
+
+    def getResultadosPorDuasColunas(self, pColuna1, pEspecificacao1, pColuna2, pEspecificacao2):
+        self.atualizarListaInvertida()
+        dict1 = self.__listasInvertidas[int(pColuna1) - 1].getIndexados()
+        dict2 = self.__listasInvertidas[int(pColuna2) - 1].getIndexados()
+
+        arr1 = dict1[pEspecificacao1]
+        arr2 = dict2[pEspecificacao2]
+
+        result = list(set(filter(lambda x: x in arr1, arr2)))
+
+
+        if(len(result) == 0):
+            print("Não há dados com tais compartibilidades")
+        else:
+            for i in range(len(result)):
+                print(self.__servicosCadastros.getLinhaAsStr(result[i]))
+
+    def inserirCadastro(self, data):
+        self.__servicosCadastros.inserirCadastro(data)
+
+    def removerCadastro(self, pIndex):
+        self.__servicosCadastros.removerCadastro(pIndex)
 
     def buscarCadastroPorListaInvertida(self, pColuna, pEspecificacao: str):
         if pColuna == "1":
@@ -137,15 +162,3 @@ class DataBase:
 
 
 
-
-
-
-
-
-#db = DataBase()
-#db.teste()
-#db.limparDataBaseMemSecundaria()
-#db.mostrarTodosDados()
-#db.salvarDados()
-#db.limparDataBaseMemPrincipal()
-#db.limparDataBaseMemSecundaria()
