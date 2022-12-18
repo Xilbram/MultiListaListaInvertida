@@ -1,6 +1,6 @@
-from ArquivosMemoriaPrincipal.Multilista import MultilistaAnimalFavorito
-from Servicos.ProcessadorFiles import *
+from ArquivosMemoriaPrincipal.ListaInvertida import *
 from Servicos.DiretorioManager import *
+from Servicos.ProcessadorFiles import *
 import os
 
 class SvcCadastros:
@@ -8,7 +8,6 @@ class SvcCadastros:
         self.__diretorioManager = DiretorioManager()
         self.__pathArquivos = self.__diretorioManager.GetDiretorioArquivos(os.getcwd())
         self.__processadorFiles = ProcessadorFiles()
-        self.__multilista = MultilistaAnimalFavorito()
 
     def getCadastros(self) -> []:
         return self.__processadorFiles.getFileAsArr(self.__pathArquivos + "/Cadastros")
@@ -36,25 +35,31 @@ class SvcCadastros:
 
         self.__processadorFiles.inserirDataEmFile(self.__pathArquivos + "/Cadastros", msg)
 
-    def salvarEIndexarCadastros(self, pCadastros: []):
+    def salvarEIndexarCadastros(self, pCadastros: [], pListasInvertidas: []):
         msg = ""
         for i in range(len(pCadastros)):
-            msg += str(pCadastros[i].index) + ","
-            msg += pCadastros[i].nome + ","
-            msg += pCadastros[i].matricula + ","
-            msg += pCadastros[i].curso + ","
-            msg += str(pCadastros[i].vontadeDeViver) + ","
-            msg += pCadastros[i].time + ","
-            msg += pCadastros[i].animalFavorito + ","
-
-            self.__multilista.acessarESetarProximoAnimal(pCadastros[i].animalFavorito, i)
-
-            msg += pCadastros[i].indexNextCurso + ","
-            msg += pCadastros[i].indexNextAnimal + ","
-            msg += pCadastros[i].indexNextTime
+            msg += str(pCadastros[i].index) + ";"
+            msg += pCadastros[i].nome + ";"
+            msg += pCadastros[i].matricula + ";"
+            msg += pCadastros[i].curso + ";"
+            msg += str(pCadastros[i].vontadeDeViver) + ";"
+            msg += pCadastros[i].time + ";"
+            msg += pCadastros[i].animalFavorito + ";"
+            msg += pCadastros[i].indexNextCurso + ";"
+            msg += pCadastros[i].indexNextAnimal + ";"
+            msg += pCadastros[i].indexNextTime + ";"
+            msg += pCadastros[i].indexNextVontadeDeViver
             msg += "\n"
 
+            #indexa ListaInvertida
+            pListasInvertidas[0].inserir(pCadastros[i].animalFavorito, pCadastros[i].index)
+            pListasInvertidas[1].inserir(pCadastros[i].curso, pCadastros[i].index)
+            pListasInvertidas[2].inserir(pCadastros[i].time, pCadastros[i].index)
+            pListasInvertidas[3].inserir(pCadastros[i].vontadeDeViver, pCadastros[i].index)
+
+
         self.__processadorFiles.inserirDataEmFile(self.__pathArquivos + "/Cadastros", msg)
+
 
 
 

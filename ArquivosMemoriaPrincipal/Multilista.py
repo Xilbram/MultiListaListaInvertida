@@ -2,56 +2,96 @@ from Servicos import ProcessadorFiles
 from Servicos import DiretorioManager
 import os
 
-processadorFiles = ProcessadorFiles.ProcessadorFiles()
-dirManager = DiretorioManager.DiretorioManager()
-pathArquivos = dirManager.GetDiretorioArquivos(os.getcwd())
-
-class MultilistaTimes:
+class Multilista():
     def __init__(self):
-        self.times = 0
+        self.__diretorioAnimais = {}
+        self.__dirManager = DiretorioManager.DiretorioManager()
+        self.__pathArquivos = self.__dirManager.GetDiretorioArquivos(os.getcwd())
+        self.__processadorFiles = ProcessadorFiles.ProcessadorFiles()
+
+    def indexarPorListaInvertida(self, pListaInvertidas: list):
+        tipoIndexacao = 0
+
+        for listaInvertida in pListaInvertidas:
+            dict: dict = listaInvertida.mostrarIndexados()
+
+            for key in dict.keys():
+                arrIndexar = dict[key]
+                for i in range(len(arrIndexar)):
+                    try:
+                        nextItem = arrIndexar[i + 1]
+                    except IndexError:
+                        nextItem = '-1'
+
+                    self.acessarLinhaESettarProxIndex(arrIndexar[i], tipoIndexacao, nextItem)
 
 
-class MultilistaCursos:
-    def __init__(self):
-        self.algo = 0
+            tipoIndexacao += 1
 
 
-class MultilistaAnimalFavorito:
-    def __init__(self):
-        self.diretorioAnimais = {}
-        #self.animais = processador.returnFileAsArr(pathArquivos + "/Animal")
+    def acessarLinhaESettarProxIndex(self, pIndexLinha,pTipoIndexacao,pProximoIndex):
+        # animal
+        totalVirgulas = 7
+        # Curso
+        if pTipoIndexacao == 1:
+            totalVirgulas = 8
+        # Time
+        if pTipoIndexacao == 2:
+            totalVirgulas = 9
 
-    def acessarESetarProximoAnimal(self, pAnimal:str, pIndex):
-        if pAnimal in self.diretorioAnimais.keys():
-            indexPrimeiroAnimal = self.diretorioAnimais[pAnimal]
-            contVirgulas = 0
+        if pTipoIndexacao == 3:
+            totalVirgulas = 10
 
-            #Pega uma linha do file como array
-            #Itera até após a 7 virgula (posicao de index do proximo animal)
-            #Acessa o próximo index, se -1 encerra
-            while True:
-                linha = processadorFiles.getLinhaFileAsString(pathArquivos + "/Cadastros", indexPrimeiroAnimal)
-                arrLinha = list(linha)
-
-                for j in range(len(linha)):
-                    if linha[j] == ',':
-                        contVirgulas += 1
-                        if contVirgulas == 8:
-                            numeroLinhaSubstituir = linha[0]
-                            indexProximoAnimal = linha[j + 1]
-                            posicaoIndexProximoAnimal = j + 1
-                            break
-
-                if indexProximoAnimal == "*":
-                    arrLinha[posicaoIndexProximoAnimal] = pIndex
-                    processadorFiles.substituirLinha(pathArquivos + "/Cadastros", int(numeroLinhaSubstituir), str(arrLinha))
-                    return
-
-                indexProximoAnimal = indexProximoAnimal
+        contVirgulas = 0
+        linha = self.__processadorFiles.getLinhaFileAsString(self.__pathArquivos + "/Cadastros", pIndexLinha)
+        numeroFoiAlterado = False
+        novaLinha = ""
 
 
-        else:
-            self.diretorioAnimais[pAnimal] = pIndex
+        for char in linha:
+
+            if contVirgulas != totalVirgulas:
+                novaLinha += char
+
+            if (numeroFoiAlterado == False) and (contVirgulas == totalVirgulas):
+                novaLinha += str(pProximoIndex)
+                if (pTipoIndexacao != 3):
+                    novaLinha += ";"
+                else:
+                    novaLinha += "\n"
+                numeroFoiAlterado = True
+
+            if char == ";":
+                contVirgulas += 1
+
+        self.__processadorFiles.substituirLinha(self.__pathArquivos + "/Cadastros", pIndexLinha, novaLinha)
+
+
+    def acessarLinhaEPegarProxIndex(self, pIndexLinha, pTipoIndexacao) -> str:
+        #animal
+        totalVirgulas = 7
+        #Curso
+        if pTipoIndexacao == 1:
+            totalVirgulas = 8
+        #Time
+        if pTipoIndexacao == 2:
+            totalVirgulas = 9
+
+        contVirgulas = 0
+        linha = self.__processadorFiles.getLinhaFileAsString(self.__pathArquivos + "/Cadastros", pIndexLinha)
+        alvoAlteracao = ""
+
+        for char in linha():
+            if char == ',':
+                contVirgulas += 1
+                if contVirgulas == totalVirgulas:
+                    alvoAlteracao += char
+
+        return alvoAlteracao
+
+
+
+
 
 
 

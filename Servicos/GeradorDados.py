@@ -1,18 +1,19 @@
-from ProcessadorFiles import *
+from Servicos.ProcessadorFiles import *
 from random import *
 from DTO.CadastroDTO import *
 from Servicos.DiretorioManager import *
 import os
 class GeradorDeDados:
     def __init__(self):
-        self.__processadorDeFiles = ProcessadorFiles()
         self.__dirManager = DiretorioManager()
-        self.__pathArquivos = self.__dirManager.GetDiretorioArquivos(os.getcwd())
+        self.__processadorDeFiles = ProcessadorFiles()
+
 
 #index, nome, matricula curso, vontadeDeViver, time, animal, indexNextCurso = -1, indexNextAnimal = -1, indexNextTime = -1
 
     def gerarCadastros(self, pQuantidade: int) -> []:
         cont = 0
+        self.__pathArquivos = self.__dirManager.GetDiretorioArquivos(os.getcwd())
         arrNomes = self.__processadorDeFiles.getFileAsArr(self.__pathArquivos + "/Nomes")
         arrCursos = self.__processadorDeFiles.getFileAsArr(self.__pathArquivos + "/Cursos")
         arrAnimais = self.__processadorDeFiles.getFileAsArr(self.__pathArquivos + "/Animal")

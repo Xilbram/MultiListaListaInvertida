@@ -1,31 +1,17 @@
-from Servicos import ProcessadorFiles
-from Servicos import DiretorioManager
-import os
-
-processadorFiles = ProcessadorFiles.ProcessadorFiles()
-dirManager = DiretorioManager.DiretorioManager()
-pathArquivos = dirManager.GetDiretorioArquivos(os.getcwd())
-
-class MultilistaTimes:
+class ListaInvertida:
     def __init__(self):
-        self.times = 0
+        self.__diretorio = {}
+    def inserir(self, pData, pIndex):
+        if pData in self.__diretorio.keys():
+            self.__diretorio[pData].append(pIndex)
+            return
 
 
-class MultilistaCursos:
-    def __init__(self):
-        self.algo = 0
+        self.__diretorio[pData] = [pIndex]
 
+    def mostrarIndexados(self):
+        return self.__diretorio
 
-class ListaInvertidaAnimaisFavoritos:
-    def __init__(self):
-        self.diretorioAnimais = {}
-        #self.animais = processador.returnFileAsArr(pathArquivos + "/Animal")
-
-    def inserir(self, pAnimal, pIndex):
-        if pAnimal in self.diretorioAnimais.keys():
-            self.diretorioAnimais[pAnimal] = self.diretorioAnimais[pAnimal] + f',{pIndex}'
-
-        self.diretorioAnimais[pAnimal] = pIndex
 
 
 

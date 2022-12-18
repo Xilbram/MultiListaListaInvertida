@@ -3,7 +3,7 @@ from Arquivos import *
 
 class ProcessadorFiles:
 
-    def getFileContent(self, file) -> str:
+    def getFileContent(self, file) -> str or Exception:
         try:
             names_file = open(file, "r")
             msg = names_file.read()
@@ -17,7 +17,7 @@ class ProcessadorFiles:
         except IsADirectoryError:
             return IsADirectoryError
 
-    def getLinhaFileAsString(self, file, numLinha) -> str:
+    def getLinhaFileAsString(self, file, numLinha) -> str or Exception:
         try:
             names_file = open(file, "r")
             lines = names_file.readlines()

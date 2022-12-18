@@ -19,6 +19,10 @@ class DiretorioManager():
         return newpath
 
     def GetDiretorioArquivos(self, pCwd) -> str:
+        newpath = pCwd + "/Arquivos"
+        return newpath
+
+    def getDiretorioArquivosCortado(self, pCwd) -> str:
         dirBase = self.getDiretorioFonte(pCwd)
         newpath = dirBase + "/Arquivos"
 

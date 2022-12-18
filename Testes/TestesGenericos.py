@@ -62,9 +62,14 @@ def TesteDict():
     for item in var.items():
         print(item)
 
+def TesteInput():
+    var = input("Digit algo")
+    print(var)
+
 #TesteLimparFile()
 
 #TesteRemoverWhitespace()
 #TestePegarLinha()
 #TesteSubstituirLinha()
-TesteDict()
+#TesteDict()
+TesteInput()

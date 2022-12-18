@@ -1,7 +1,8 @@
 
 
 class CadastroDTO:
-    def __init__(self, index, nome, matricula, curso, vontadeDeViver, time, animal, indexNextCurso = "*", indexNextAnimal = "*", indexNextTime = "*"):
+    def __init__(self, index, nome, matricula, curso, vontadeDeViver, time, animal, indexNextCurso = '-1',
+                 indexNextAnimal = '-1', indexNextTime = '-1', indexNextVontadeViver = '-1'):
         self.index = index
         self.nome = nome
         self.matricula = matricula
@@ -12,3 +13,4 @@ class CadastroDTO:
         self.indexNextCurso = indexNextCurso
         self.indexNextAnimal = indexNextAnimal
         self.indexNextTime = indexNextTime
+        self.indexNextVontadeDeViver = indexNextVontadeViver
