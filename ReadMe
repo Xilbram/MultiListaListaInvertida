@@ -1,5 +1,6 @@
 Este é o projeto da disciplina de ED 2022 semestre 2, desenvolvido por Gibram e Eduardo Zanetta
 Ele consiste em um sistema de cadastros que implemente multilistas e listas invertidas
+Este projeto foi desenvolvido no sistema Linux e utiliza a linguagem python v3.8
 
 Para executar o sistema, basta executar o arquivo "main.py"
 
