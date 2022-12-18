@@ -9,8 +9,9 @@ class ListaInvertida:
 
         self.__diretorio[pData] = [pIndex]
 
-    def mostrarIndexados(self):
+    def getIndexados(self):
         return self.__diretorio
+
 
 
 

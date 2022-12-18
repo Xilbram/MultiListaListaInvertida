@@ -14,3 +14,6 @@ class CadastroDTO:
         self.indexNextAnimal = indexNextAnimal
         self.indexNextTime = indexNextTime
         self.indexNextVontadeDeViver = indexNextVontadeViver
+
+    def returnAllData(self):
+        return self.index,self.nome,self.matricula,self.curso,self.vontadeDeViver,self.time,self.animalFavorito

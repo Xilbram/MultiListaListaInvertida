@@ -3,6 +3,20 @@ from Arquivos import *
 
 class ProcessadorFiles:
 
+    def getIndexUltimaLinhaFile(self, file) -> int or Exception:
+        try:
+            names_file = open(file, "r")
+            arr = names_file.readlines()
+            num = len(arr)
+            names_file.close()
+
+            return num
+
+        except FileNotFoundError:
+            return FileNotFoundError
+
+        except IsADirectoryError:
+            return IsADirectoryError
     def getFileContent(self, file) -> str or Exception:
         try:
             names_file = open(file, "r")
@@ -21,7 +35,8 @@ class ProcessadorFiles:
         try:
             names_file = open(file, "r")
             lines = names_file.readlines()
-            msg = lines[numLinha]
+            num = int(numLinha)
+            msg = lines[num]
             names_file.close()
 
             return msg
@@ -103,7 +118,8 @@ class ProcessadorFiles:
         try:
             names_file = open(pFile, "r")
             lines = names_file.readlines()
-            lines[pIndexLinha] = pLinhaNova
+            num = int(pIndexLinha)
+            lines[num] = pLinhaNova
 
             names_file = open(pFile, "w")
             names_file.writelines(lines)

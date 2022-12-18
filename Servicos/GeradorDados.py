@@ -12,8 +12,9 @@ class GeradorDeDados:
 #index, nome, matricula curso, vontadeDeViver, time, animal, indexNextCurso = -1, indexNextAnimal = -1, indexNextTime = -1
 
     def gerarCadastros(self, pQuantidade: int) -> []:
-        cont = 0
         self.__pathArquivos = self.__dirManager.GetDiretorioArquivos(os.getcwd())
+
+        cont = self.__processadorDeFiles.getIndexUltimaLinhaFile(self.__pathArquivos + "/Cadastros")
         arrNomes = self.__processadorDeFiles.getFileAsArr(self.__pathArquivos + "/Nomes")
         arrCursos = self.__processadorDeFiles.getFileAsArr(self.__pathArquivos + "/Cursos")
         arrAnimais = self.__processadorDeFiles.getFileAsArr(self.__pathArquivos + "/Animal")
